@@ -17,7 +17,6 @@
      Gives the total sales for a product family at a particular store at a given date. Fractional values are possible since products can be sold in fractional units (e.g., 1.5 kg of cheese).
      
      <center>
-
      | index |  id  |    date    | store_nbr |   family   |  sales  | onpromotion |
      |:-----:|:----:|:----------:|:---------:|---|:-------:|:-----------:|
      |   0   |  0   | 2013-01-01 |     1     | AUTOMOTIVE |   0.0   |      0      |
@@ -25,7 +24,7 @@
      |   2   |  2   | 2013-01-01 |     1     |   BEAUTY   |   0.0   |      0      |
      |   3   |  3   | 2013-01-01 |     1     | BEVERAGES  |   0.0   |      0      |
      |   4   |  4   | 2013-01-01 |     1     |   BOOKS    |   0.0   |      0      |
-     
+     </center>
 
 2. ### Stores Dataset
    - Store metadata including:
@@ -43,7 +42,6 @@
      - **cluster** &ensp; : Grouping of similar stores. (17 Clusters)
        - 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
      <center>
-
      |index|store\_nbr|city|state|type|cluster|
      |:-----:|:-----:|---|---|:-----:|:-----:|
      |0|1|Quito|Pichincha|D|13|
@@ -51,7 +49,7 @@
      |2|3|Quito|Pichincha|D|8|
      |3|4|Quito|Pichincha|D|9|
      |4|5|Santo Domingo|Santo Domingo de los Tsachilas|D|4|
-
+     </center>
 
 3. ### Holidays Events Dataset
    - **Note**:
@@ -59,7 +57,6 @@
      - **Bridge days**&ensp; &ensp;: Extra days added to holidays for extended breaks.
      - **Work Day**&emsp;&emsp;: Compensates for Bridge days, not normally scheduled workdays.
     <center>
-
    |index|date|type|locale|locale\_name|description|transferred|
    |:-----:|:-----:|:-----:|---|---|---|:-----:|
    |0|2012-03-02|Holiday|Local|Manta|Fundacion de Manta|false|
@@ -67,11 +64,11 @@
    |2|2012-04-12|Holiday|Local|Cuenca|Fundacion de Cuenca|false|
    |3|2012-04-14|Holiday|Local|Libertad|Cantonizacion de Libertad|false|
    |4|2012-04-21|Holiday|Local|Riobamba|Cantonizacion de Riobamba|false|
+    </center>
 
 4. ### Oil Dataset
    - **Daily oil price**. Includes values during both the train and test data timeframes. **(Ecuador is an oil-dependent country and it's economical health is highly vulnerable to shocks in oil prices.)** 
    <center>
-
     |index|date|dcoilwtico|
     |:-----:|:-----:|:-----:|
     |0|2013-01-01|NaN|
@@ -79,6 +76,7 @@
     |2|2013-01-03|92\.97|
     |3|2013-01-04|93\.12|
     |4|2013-01-07|93\.2| 
+   </center>
 ---
 ## Data Preprocessing
 
@@ -88,7 +86,6 @@
       - **Words to be removed**: puente, recupero, traslado
       - **Important words contain information** : fundacion, provincializacion, terremoto manabi, mundial de futbol brasil, fundacion, cantonizacion, primer dia del ano, independencia, navidad, dia de la madre
       <center>
-
       |index|date|type|locale|locale\_name|description|
       |---|---|---|---|---|---|
       |0|2012-03-02|Holiday|Local|Manta|fundacion|
@@ -96,6 +93,7 @@
       |2|2012-04-12|Holiday|Local|Cuenca|fundacion|
       |3|2012-04-14|Holiday|Local|Libertad|cantonizacion|
       |4|2012-04-21|Holiday|Local|Riobamba|cantonizacion| 
+      </center>
     -  The types of events are divided into three categories: local (city), regional (state), and national events. National events are likely to impact predictions across all locations, while on the other hand, local and regional events will only influence the city and state where the event occurs. Hence, when connecting the "Holidays" dataset with the train-test data, it's essential to consider both the location and type of each event.
   
 2. ### **Oil Datasets**
@@ -104,9 +102,8 @@
     -  Adding new rows for each missing date in the dataset.
     -  Performing null value imputation using **regression imputation**. This is because the price values correlate with dates, allowing us to utilize temporal information as a feature.
     <center> 
-    
-    ![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/d380c03e-babd-43ef-9ce9-72f578b63898)
-   
+    ![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/75785055-1683-449e-af14-363b3f40f48d)
+    </center> 
 4. ### **Merge Datasets & Selection Features**
     - The first datasets to be merged are the train-test data and the stores data. The purpose of this merging is to obtain information about the location (city and state), as well as the type and cluster of a store. The merging of these two datasets is carried out using the "store_nbr" column as the join key.
     <center>
@@ -140,10 +137,9 @@
 ## **Create a Machine Learning Models (Using XGBRegressor)**
 
 1. Split the data into **training data** (1554 samples), **testing data** (150 samples), and **prediction data** (16 samples) for each table that has been partitioned based on store number and product type.
+
 <center>
-
-![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/c83860f6-d899-4209-a1cc-c8d557fa44b2)
-
+![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/572f0f0a-2776-4116-bde3-d0e5b1fe0c8d)
 </center>
 
 1. Create a machine learning model using the **XGBRegressor** technique with the following parameters:
@@ -151,10 +147,9 @@
    - **early_stopping_rounds** = 50
    - **evaluation metric** = root mean square error (RMSE).
 2. Identify the features that have the most significant impact on the model.
+3. 
 <center>
-
-![Uploading image.png…]()
-
+![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/2f18ef2d-2626-430c-b5f6-929ec5bcaef9)
 </center>
 3. Evaluate the model by observing the error values at each epoch.
 4. Compare the prediction results with the actual values.
