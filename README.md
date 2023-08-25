@@ -105,9 +105,9 @@
     -  Performing null value imputation using **regression imputation**. This is because the price values correlate with dates, allowing us to utilize temporal information as a feature.
     <center> 
     
-    ![Alt text](image.png)
-
-3. ### **Merge Datasets & Selection Features**
+    ![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/d380c03e-babd-43ef-9ce9-72f578b63898)
+   
+4. ### **Merge Datasets & Selection Features**
     - The first datasets to be merged are the train-test data and the stores data. The purpose of this merging is to obtain information about the location (city and state), as well as the type and cluster of a store. The merging of these two datasets is carried out using the "store_nbr" column as the join key.
     <center>
 
@@ -142,7 +142,8 @@
 1. Split the data into **training data** (1554 samples), **testing data** (150 samples), and **prediction data** (16 samples) for each table that has been partitioned based on store number and product type.
 <center>
 
-![Alt text](image-2.png)
+![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/c83860f6-d899-4209-a1cc-c8d557fa44b2)
+
 </center>
 
 1. Create a machine learning model using the **XGBRegressor** technique with the following parameters:
@@ -152,7 +153,8 @@
 2. Identify the features that have the most significant impact on the model.
 <center>
 
-![Alt text](image-3.png)
+![Uploading image.png…]()
+
 </center>
 3. Evaluate the model by observing the error values at each epoch.
 4. Compare the prediction results with the actual values.
