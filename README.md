@@ -17,7 +17,7 @@
      Gives the total sales for a product family at a particular store at a given date. Fractional values are possible since products can be sold in fractional units (e.g., 1.5 kg of cheese).
      
      <center>
-
+        
      | index |  id  |    date    | store_nbr |   family   |  sales  | onpromotion |
      |:-----:|:----:|:----------:|:---------:|---|:-------:|:-----------:|
      |   0   |  0   | 2019-04-01 |     1     | AUTOMOTIVE |   0.0   |      0      |
@@ -43,7 +43,7 @@
      - **cluster** &ensp; : Grouping of similar stores. (17 Clusters)
        - 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
      <center>
-
+        
      |index|store\_nbr|city|state|type|cluster|
      |:-----:|:-----:|---|---|:-----:|:-----:|
      |0|1|Quito|Pichincha|D|13|
@@ -51,7 +51,7 @@
      |2|3|Quito|Pichincha|D|8|
      |3|4|Quito|Pichincha|D|9|
      |4|5|Santo Domingo|Santo Domingo de los Tsachilas|D|4|
-
+     </center>
 
 3. ### Holidays Events Dataset
    - **Note**:
@@ -59,7 +59,7 @@
      - **Bridge days**&ensp; &ensp;: Extra days added to holidays for extended breaks.
      - **Work Day**&emsp;&emsp;: Compensates for Bridge days, not normally scheduled workdays.
     <center>
-
+       
    |index|date|type|locale|locale\_name|description|transferred|
    |:-----:|:-----:|:-----:|---|---|---|:-----:|
    |0|2018-05-31|Holiday|Local|Manta|Fundacion de Manta|false|
@@ -71,7 +71,7 @@
 4. ### Oil Dataset
    - **Daily oil price**. Includes values during both the train and test data timeframes. **(Ecuador is an oil-dependent country and it's economical health is highly vulnerable to shocks in oil prices.)** 
    <center>
-
+      
     |index|date|dcoilwtico|
     |:-----:|:-----:|:-----:|
     |0|2019-04-01|NaN|
@@ -79,6 +79,7 @@
     |2|2019-04-03|92\.97|
     |3|2019-04-04|93\.12|
     |4|2019-04-07|93\.2| 
+   </center>
 ---
 ## Data Preprocessing
 
@@ -88,7 +89,7 @@
       - **Words to be removed**: puente, recupero, traslado
       - **Important words contain information** : fundacion, provincializacion, terremoto manabi, mundial de futbol brasil, fundacion, cantonizacion, primer dia del ano, independencia, navidad, dia de la madre
       <center>
-
+         
       |index|date|type|locale|locale\_name|description|
       |---|---|---|---|---|---|
       |0|2018-05-31|Holiday|Local|Manta|fundacion|
@@ -96,6 +97,7 @@
       |2|2018-07-11|Holiday|Local|Cuenca|fundacion|
       |3|2018-07-13|Holiday|Local|Libertad|cantonizacion|
       |4|2018-07-20|Holiday|Local|Riobamba|cantonizacion| 
+      </center>
     -  The types of events are divided into three categories: local (city), regional (state), and national events. National events are likely to impact predictions across all locations, while on the other hand, local and regional events will only influence the city and state where the event occurs. Hence, when connecting the "Holidays" dataset with the train-test data, it's essential to consider both the location and type of each event.
   
 2. ### **Oil Datasets**
@@ -104,9 +106,9 @@
     -  Adding new rows for each missing date in the dataset.
     -  Performing null value imputation using **regression imputation**. This is because the price values correlate with dates, allowing us to utilize temporal information as a feature.
     <center> 
-    
-    ![Alt text](image.png)
-
+       
+    ![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/75785055-1683-449e-af14-363b3f40f48d)
+    </center> 
 3. ### **Merge Datasets & Selection Features**
     - The first datasets to be merged are the train-test data and the stores data. The purpose of this merging is to obtain information about the location (city and state), as well as the type and cluster of a store. The merging of these two datasets is carried out using the "store_nbr" column as the join key.
     <center>
@@ -153,9 +155,10 @@
 ## **Create a Machine Learning Models (Using XGBRegressor)**
 
 1. Split the data into **training data** (1554 samples), **testing data** (150 samples), and **prediction data** (16 samples) for each table that has been partitioned based on store number and product type.
-<center>
 
-![Alt text](image-2.png)
+<center>
+   
+![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/572f0f0a-2776-4116-bde3-d0e5b1fe0c8d)
 </center>
 
 1. Create a machine learning model using the **XGBRegressor** technique with the following parameters:
@@ -164,8 +167,8 @@
    - **evaluation metric** = root mean square error (RMSE).
 2. Identify the features that have the most significant impact on the model.
 <center>
-
-![Alt text](image-3.png)
+   
+![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/2f18ef2d-2626-430c-b5f6-929ec5bcaef9)
 </center>
 3. Evaluate the model by observing the error values at each epoch.
 4. Compare the prediction results with the actual values.
