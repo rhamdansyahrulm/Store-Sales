@@ -20,11 +20,11 @@
 
      | index |  id  |    date    | store_nbr |   family   |  sales  | onpromotion |
      |:-----:|:----:|:----------:|:---------:|---|:-------:|:-----------:|
-     |   0   |  0   | 2013-01-01 |     1     | AUTOMOTIVE |   0.0   |      0      |
-     |   1   |  1   | 2013-01-01 |     1     | BABY CARE  |   0.0   |      0      |
-     |   2   |  2   | 2013-01-01 |     1     |   BEAUTY   |   0.0   |      0      |
-     |   3   |  3   | 2013-01-01 |     1     | BEVERAGES  |   0.0   |      0      |
-     |   4   |  4   | 2013-01-01 |     1     |   BOOKS    |   0.0   |      0      |
+     |   0   |  0   | 2019-04-01 |     1     | AUTOMOTIVE |   0.0   |      0      |
+     |   1   |  1   | 2019-04-01 |     1     | BABY CARE  |   0.0   |      0      |
+     |   2   |  2   | 2019-04-01 |     1     |   BEAUTY   |   0.0   |      0      |
+     |   3   |  3   | 2019-04-01 |     1     | BEVERAGES  |   0.0   |      0      |
+     |   4   |  4   | 2019-04-01 |     1     |   BOOKS    |   0.0   |      0      |
      
 
 2. ### Stores Dataset
@@ -62,11 +62,11 @@
 
    |index|date|type|locale|locale\_name|description|transferred|
    |:-----:|:-----:|:-----:|---|---|---|:-----:|
-   |0|2012-03-02|Holiday|Local|Manta|Fundacion de Manta|false|
-   |1|2012-04-01|Holiday|Regional|Cotopaxi|Provincializacion de Cotopaxi|false|
-   |2|2012-04-12|Holiday|Local|Cuenca|Fundacion de Cuenca|false|
-   |3|2012-04-14|Holiday|Local|Libertad|Cantonizacion de Libertad|false|
-   |4|2012-04-21|Holiday|Local|Riobamba|Cantonizacion de Riobamba|false|
+   |0|2018-05-31|Holiday|Local|Manta|Fundacion de Manta|false|
+   |1|2018-06-30|Holiday|Regional|Cotopaxi|Provincializacion de Cotopaxi|false|
+   |2|2018-07-11|Holiday|Local|Cuenca|Fundacion de Cuenca|false|
+   |3|2018-07-13|Holiday|Local|Libertad|Cantonizacion de Libertad|false|
+   |4|2018-07-20|Holiday|Local|Riobamba|Cantonizacion de Riobamba|false|
 
 4. ### Oil Dataset
    - **Daily oil price**. Includes values during both the train and test data timeframes. **(Ecuador is an oil-dependent country and it's economical health is highly vulnerable to shocks in oil prices.)** 
@@ -74,11 +74,11 @@
 
     |index|date|dcoilwtico|
     |:-----:|:-----:|:-----:|
-    |0|2013-01-01|NaN|
-    |1|2013-01-02|93\.14|
-    |2|2013-01-03|92\.97|
-    |3|2013-01-04|93\.12|
-    |4|2013-01-07|93\.2| 
+    |0|2019-04-01|NaN|
+    |1|2019-04-02|93\.14|
+    |2|2019-04-03|92\.97|
+    |3|2019-04-04|93\.12|
+    |4|2019-04-07|93\.2| 
 ---
 ## Data Preprocessing
 
@@ -91,11 +91,11 @@
 
       |index|date|type|locale|locale\_name|description|
       |---|---|---|---|---|---|
-      |0|2012-03-02|Holiday|Local|Manta|fundacion|
-      |1|2012-04-01|Holiday|Regional|Cotopaxi|provincializacion|
-      |2|2012-04-12|Holiday|Local|Cuenca|fundacion|
-      |3|2012-04-14|Holiday|Local|Libertad|cantonizacion|
-      |4|2012-04-21|Holiday|Local|Riobamba|cantonizacion| 
+      |0|2018-05-31|Holiday|Local|Manta|fundacion|
+      |1|2018-06-30|Holiday|Regional|Cotopaxi|provincializacion|
+      |2|2018-07-11|Holiday|Local|Cuenca|fundacion|
+      |3|2018-07-13|Holiday|Local|Libertad|cantonizacion|
+      |4|2018-07-20|Holiday|Local|Riobamba|cantonizacion| 
     -  The types of events are divided into three categories: local (city), regional (state), and national events. National events are likely to impact predictions across all locations, while on the other hand, local and regional events will only influence the city and state where the event occurs. Hence, when connecting the "Holidays" dataset with the train-test data, it's essential to consider both the location and type of each event.
   
 2. ### **Oil Datasets**
@@ -113,11 +113,11 @@
 
     |index|date|store\_nbr|family|sales|onpromotion|city|state|type|cluster|
     |:-----:|:-----:|:-----:|---|:-----:|:-----:|---|---|:-----:|:-----:|
-    |0|2013-01-01|1|AUTOMOTIVE|0\.0|0|Quito|Pichincha|D|13|
-    |1|2013-01-01|1|BABY CARE|0\.0|0|Quito|Pichincha|D|13|
-    |2|2013-01-01|1|BEAUTY|0\.0|0|Quito|Pichincha|D|13|
-    |3|2013-01-01|1|BEVERAGES|0\.0|0|Quito|Pichincha|D|13|
-    |4|2013-01-01|1|BOOKS|0\.0|0|Quito|Pichincha|D|13| 
+    |0|2019-04-01|1|AUTOMOTIVE|0\.0|0|Quito|Pichincha|D|13|
+    |1|2019-04-02|1|BABY CARE|0\.0|0|Quito|Pichincha|D|13|
+    |2|2019-04-03|1|BEAUTY|0\.0|0|Quito|Pichincha|D|13|
+    |3|2019-04-04|1|BEVERAGES|0\.0|0|Quito|Pichincha|D|13|
+    |4|2019-04-05|1|BOOKS|0\.0|0|Quito|Pichincha|D|13| 
     </center>
 
    - Once the store's location is known, the data will be split into separate tables for each store and the type of products sold.
@@ -129,11 +129,24 @@
 
    |date|id|sales|onpromotion|dcoilwtico|case\_city|description\_city|case\_regional|description\_regional|case|description|
    |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-   |2013-01-01|36|0\.0|0|93\.07|2|1|0|0|3|11|
-   |2013-01-02|1818|396\.0|0|93\.14|2|1|0|0|6|16|
-   |2013-01-03|3600|399\.0|0|92\.97|2|1|0|0|6|16|
-   |2013-01-04|5382|460\.0|0|93\.12|2|1|0|0|6|16|
-   |2013-01-05|7164|624\.0|0|93\.09|2|1|0|0|5|10| 
+   |2019-01-01|36|0\.0|0|93\.07|2|1|0|0|3|11|
+   |2019-01-02|1818|396\.0|0|93\.14|2|1|0|0|6|16|
+   |2019-01-03|3600|399\.0|0|92\.97|2|1|0|0|6|16|
+   |2019-01-04|5382|460\.0|0|93\.12|2|1|0|0|6|16|
+   |2019-01-05|7164|624\.0|0|93\.09|2|1|0|0|5|10| 
+   </center>
+
+   - Next, I will scale the values of all the features that I will use during the training process. It can help prevent numerical instability issues that may arise during computations, especially when dealing with large values or tiny differences between data points.
+   - Finally, I create a windowed dataset with a window size of 7 and a stride of 1. It makes allows me to extract and structure temporal information from time series data, making it suitable for various analytical and modeling tasks.
+   <center>
+
+   |index|onpromotion|dcoilwtico|case\_Local|description\_Local|case\_Regional|description\_Regional|case\_National|description\_National|sales\_1|sales\_2|sales\_3|sales\_4|sales\_5|sales\_6|y|
+   |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+   |0|0\.0|0\.792|1\.0|0\.0|0\.0|0\.0|0\.6|0\.733|0\.0|0\.254|0\.213|0\.158|0\.253|0\.268|0\.195|
+   |1|0\.0|0\.793|1\.0|0\.0|0\.0|0\.0|1\.0|0\.0|0\.254|0\.213|0\.158|0\.253|0\.268|0\.195|0\.174|
+   |2|0\.0|0\.791|1\.0|0\.0|0\.0|0\.0|1\.0|0\.0|0\.213|0\.158|0\.253|0\.268|0\.195|0\.174|0\.146|
+   |3|0\.0|0\.793|1\.0|0\.0|0\.0|0\.0|1\.0|0\.0|0\.158|0\.253|0\.268|0\.195|0\.174|0\.146|0\.145|
+   |4|0\.0|0\.792|1\.0|0\.0|0\.0|0\.0|1\.0|0\.667|0\.253|0\.268|0\.195|0\.174|0\.146|0\.145|0\.143|
    </center>
 
 ---
