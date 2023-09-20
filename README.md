@@ -168,7 +168,7 @@
 2. Identify the features that have the most significant impact on the model.
 <center>
    
-![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/2f18ef2d-2626-430c-b5f6-929ec5bcaef9)
+![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/a30f5c13-c03c-47b8-b7bb-6679bae74a95)
 </center>
 3. Evaluate the model by observing the error values at each epoch.
 4. Compare the prediction results with the actual values.
