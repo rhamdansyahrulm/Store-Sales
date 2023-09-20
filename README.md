@@ -17,7 +17,6 @@
      Gives the total sales for a product family at a particular store at a given date. Fractional values are possible since products can be sold in fractional units (e.g., 1.5 kg of cheese).
      
      <center>
-        
      | index |  id  |    date    | store_nbr |   family   |  sales  | onpromotion |
      |:-----:|:----:|:----------:|:---------:|---|:-------:|:-----------:|
      |   0   |  0   | 2019-04-01 |     1     | AUTOMOTIVE |   0.0   |      0      |
@@ -25,7 +24,7 @@
      |   2   |  2   | 2019-04-01 |     1     |   BEAUTY   |   0.0   |      0      |
      |   3   |  3   | 2019-04-01 |     1     | BEVERAGES  |   0.0   |      0      |
      |   4   |  4   | 2019-04-01 |     1     |   BOOKS    |   0.0   |      0      |
-     
+     </center>
 
 2. ### Stores Dataset
    - Store metadata including:
