@@ -59,7 +59,7 @@
   </table>
 </div>
       
-    -  The types of events are divided into three categories: local (city), regional (state), and national events. National events are likely to impact predictions across all locations, while on the other hand, local and regional events will only influence the city and state where the event occurs. Hence, when connecting the "Holidays" dataset with the train-test data, it's essential to consider both the location and type of each event.
+-  The types of events are divided into three categories: local (city), regional (state), and national events. National events are likely to impact predictions across all locations, while on the other hand, local and regional events will only influence the city and state where the event occurs. Hence, when connecting the "Holidays" dataset with the train-test data, it's essential to consider both the location and type of each event.
   
 2. ### **Oil Datasets**
     The list of oil price data available **does not have complete data for each day**; there are **missing dates** or **dates with null values for oil prices**. Therefore, there are several steps that need to be taken:
