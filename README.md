@@ -62,5 +62,3 @@ Daily oil price, including values during both the train and test data timeframes
 |2|2019-04-03|92.97|
 |3|2019-04-04|93.12|
 |4|2019-04-07|93.20|
-
-Dengan tampilan ini, informasi mengenai dataset akan lebih mudah dipahami oleh pengguna GitHub Anda. Anda dapat menyalin teks di atas dan memasukkannya ke dalam `readme.md` di repositori GitHub Anda.
