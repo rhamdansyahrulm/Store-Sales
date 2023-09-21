@@ -6,7 +6,7 @@
       - **Words to be removed**: puente, recupero, traslado
       - **Important words contain information** : fundacion, provincializacion, terremoto manabi, mundial de futbol brasil, fundacion, cantonizacion, primer dia del ano, independencia, navidad, dia de la madre
          
-    <div align="center">
+<div align="center">
   <table>
     <tr>
       <th>index</th>
