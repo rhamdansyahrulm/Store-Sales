@@ -16,9 +16,9 @@
     - **Sales**<br> 
      Gives the total sales for a product family at a particular store at a given date. Fractional values are possible since products can be sold in fractional units (e.g., 1.5 kg of cheese).
      
-     <center>
+     <center> 
      | index |  id  |    date    | store_nbr |   family   |  sales  | onpromotion |
-     |:-----:|:----:|:----------:|:---------:|---|:-------:|:-----------:|
+     |:-----:|:----:|:----------:|:---------:|------------|:-------:|:-----------:|
      |   0   |  0   | 2019-04-01 |     1     | AUTOMOTIVE |   0.0   |      0      |
      |   1   |  1   | 2019-04-01 |     1     | BABY CARE  |   0.0   |      0      |
      |   2   |  2   | 2019-04-01 |     1     |   BEAUTY   |   0.0   |      0      |
