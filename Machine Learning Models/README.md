@@ -119,19 +119,19 @@
 
 1. Split the data into **training data** (1554 samples), **testing data** (150 samples), and **prediction data** (16 samples) for each table that has been partitioned based on store number and product type.
 
-<center>
-   
-![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/572f0f0a-2776-4116-bde3-d0e5b1fe0c8d)
-</center>
+<p align="center">
+  <img src="https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/572f0f0a-2776-4116-bde3-d0e5b1fe0c8d" alt="Image">
+</p>
 
 1. Create a machine learning model using the **XGBRegressor** technique with the following parameters:
    - **n_estimators** = 1000
    - **early_stopping_rounds** = 50
    - **evaluation metric** = root mean square error (RMSE).
 2. Identify the features that have the most significant impact on the model.
-<center>
-   
-![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/a30f5c13-c03c-47b8-b7bb-6679bae74a95)
-</center>
+
+<p align="center">
+  <img src="https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/a30f5c13-c03c-47b8-b7bb-6679bae74a95" alt="Image">
+</p>
+
 3. Evaluate the model by observing the error values at each epoch.
 4. Compare the prediction results with the actual values.
