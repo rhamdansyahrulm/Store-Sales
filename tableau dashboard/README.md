@@ -31,5 +31,3 @@ The "Products" dashboard is designed to display sales results based on product g
 - **Value Trending**: This chart visualizes the trending of values.
 - **Top Sales on Each Product Group**: It identifies the top-selling products within each product group.
 - **Top Promotional Products**: This chart showcases the most successful promotional products.
-
-Feel free to explore these dashboards to gain valuable insights into your business's performance and product group sales strategies.
