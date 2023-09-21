@@ -40,7 +40,33 @@ Training data consists of time series features:
       <td>0.0</td>
       <td>0</td>
     </tr>
-    <!-- Add more rows here -->
+    <tr>
+      <td>2</td>
+      <td>2</td>
+      <td>2019-04-01</td>
+      <td>1</td>
+      <td>BEAUTY</td>
+      <td>0.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>3</td>
+      <td>2019-04-01</td>
+      <td>1</td>
+      <td>BEVERAGES</td>
+      <td>0.0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>4</td>
+      <td>2019-04-01</td>
+      <td>1</td>
+      <td>BOOKS</td>
+      <td>0.0</td>
+      <td>0</td>
+    </tr>
   </table>
 </div>
 
