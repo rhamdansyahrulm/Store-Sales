@@ -120,7 +120,7 @@
 1. Split the data into **training data** (1554 samples), **testing data** (150 samples), and **prediction data** (16 samples) for each table that has been partitioned based on store number and product type.
 
 <p align="center">
-  <img src="https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/572f0f0a-2776-4116-bde3-d0e5b1fe0c8d" alt="Image">
+  <img src="https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/0f5e0c65-3738-4015-ad80-6d4b8e2d088c" alt="Image">
 </p>
 
 1. Create a machine learning model using the **XGBRegressor** technique with the following parameters:
