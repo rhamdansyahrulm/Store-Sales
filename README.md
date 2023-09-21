@@ -193,7 +193,12 @@ Store metadata includes:
       <td>2018-07-20</td>
       <td>Holiday</td>
       <td>Local</td>
-      <
+      <td>Riobamba</td>
+      <td>Cantonizacion de Riobamba</td>
+      <td>false</td>
+    </tr>
+  </table>
+</div>
 
 ## 4. Oil Dataset
 
