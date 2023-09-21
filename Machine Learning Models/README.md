@@ -66,10 +66,10 @@
     
     -  Adding new rows for each missing date in the dataset.
     -  Performing null value imputation using **regression imputation**. This is because the price values correlate with dates, allowing us to utilize temporal information as a feature.
-    <center> 
-       
-    ![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/75785055-1683-449e-af14-363b3f40f48d)
-    </center> 
+<center> 
+![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/75785055-1683-449e-af14-363b3f40f48d)
+</center> 
+
 3. ### **Merge Datasets & Selection Features**
     - The first datasets to be merged are the train-test data and the stores data. The purpose of this merging is to obtain information about the location (city and state), as well as the type and cluster of a store. The merging of these two datasets is carried out using the "store_nbr" column as the join key.
     <center>
