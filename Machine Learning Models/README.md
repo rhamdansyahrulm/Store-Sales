@@ -5,16 +5,60 @@
     - **Shortened Event Descriptions** : Event descriptions are lengthy and verbose. To enhance clarity, it's recommended to truncate the descriptions to focus on essential information. For instance:
       - **Words to be removed**: puente, recupero, traslado
       - **Important words contain information** : fundacion, provincializacion, terremoto manabi, mundial de futbol brasil, fundacion, cantonizacion, primer dia del ano, independencia, navidad, dia de la madre
-      <center>
          
-      |index|date|type|locale|locale\_name|description|
-      |---|---|---|---|---|---|
-      |0|2018-05-31|Holiday|Local|Manta|fundacion|
-      |1|2018-06-30|Holiday|Regional|Cotopaxi|provincializacion|
-      |2|2018-07-11|Holiday|Local|Cuenca|fundacion|
-      |3|2018-07-13|Holiday|Local|Libertad|cantonizacion|
-      |4|2018-07-20|Holiday|Local|Riobamba|cantonizacion| 
-      </center>
+    <div align="center">
+  <table>
+    <tr>
+      <th>index</th>
+      <th>date</th>
+      <th>type</th>
+      <th>locale</th>
+      <th>locale_name</th>
+      <th>description</th>
+    </tr>
+    <tr>
+      <td>0</td>
+      <td>2018-05-31</td>
+      <td>Holiday</td>
+      <td>Local</td>
+      <td>Manta</td>
+      <td>fundacion</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2018-06-30</td>
+      <td>Holiday</td>
+      <td>Regional</td>
+      <td>Cotopaxi</td>
+      <td>provincializacion</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2018-07-11</td>
+      <td>Holiday</td>
+      <td>Local</td>
+      <td>Cuenca</td>
+      <td>fundacion</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>2018-07-13</td>
+      <td>Holiday</td>
+      <td>Local</td>
+      <td>Libertad</td>
+      <td>cantonizacion</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>2018-07-20</td>
+      <td>Holiday</td>
+      <td>Local</td>
+      <td>Riobamba</td>
+      <td>cantonizacion</td>
+    </tr>
+  </table>
+</div>
+      
     -  The types of events are divided into three categories: local (city), regional (state), and national events. National events are likely to impact predictions across all locations, while on the other hand, local and regional events will only influence the city and state where the event occurs. Hence, when connecting the "Holidays" dataset with the train-test data, it's essential to consider both the location and type of each event.
   
 2. ### **Oil Datasets**
