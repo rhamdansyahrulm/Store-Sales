@@ -10,3 +10,26 @@
     <img src="https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/75025239-9d79-4493-856e-3436ea424874" alt="Ecuador's Store Dashboard" width="45%">
   </a>
 </div>
+
+## Dashboard Description
+
+### Home
+
+The "Home" dashboard is designed to provide a comprehensive overview of the overall performance of all stores. This dashboard serves as a tool for monitoring the business's overall performance at a glance. By presenting relevant data in the form of charts and figures, it allows stakeholders to quickly assess whether the business is meeting its targets. Some of the key charts included on this dashboard are:
+
+- **Revenue**: This chart displays the total revenue generated.
+- **Total Transactions**: It presents the total number of transactions.
+- **Total Promotions**: This chart shows the overall promotional activity.
+- **Sales Distribution**: A visual representation of sales distribution.
+- **Top Sales by City and State**: It highlights the top-performing cities and states.
+- **Total Sales by Store Type**: This chart breaks down sales by store type.
+
+### Products
+
+The "Products" dashboard is designed to display sales results based on product groups. This dashboard can be used to plan more effective sales and promotional strategies. It provides insights into when and how to promote specific products based on sales trends within each product group. Some of the key charts included on this dashboard are:
+
+- **Value Trending**: This chart visualizes the trending of values.
+- **Top Sales on Each Product Group**: It identifies the top-selling products within each product group.
+- **Top Promotional Products**: This chart showcases the most successful promotional products.
+
+Feel free to explore these dashboards to gain valuable insights into your business's performance and product group sales strategies.
