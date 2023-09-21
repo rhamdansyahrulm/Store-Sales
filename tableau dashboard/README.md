@@ -1,1 +1,1 @@
-[[Home](https://public.tableau.com/views/EcuadorsStoreSales/Home?:language=en-US&:display_count=n&:origin=viz_share_link!)https://public.tableau.com/views/EcuadorsStoreSales/Home?:language=en-US&:display_count=n&:origin=viz_share_link!](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/ce97d56b-1952-4648-b43f-174cc234b76d)
+![Home](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/46a8a4db-0ed5-426a-96ec-a4954f0d547f)https://public.tableau.com/views/EcuadorsStoreSales/products?:language=en-US&:display_count=n&:origin=viz_share_link
