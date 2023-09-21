@@ -67,7 +67,9 @@
     -  Adding new rows for each missing date in the dataset.
     -  Performing null value imputation using **regression imputation**. This is because the price values correlate with dates, allowing us to utilize temporal information as a feature.
 <center> 
+    
 ![image](https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/75785055-1683-449e-af14-363b3f40f48d)
+
 </center> 
 
 3. ### **Merge Datasets & Selection Features**
