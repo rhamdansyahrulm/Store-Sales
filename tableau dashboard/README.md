@@ -1,4 +1,4 @@
-### Ecuador's Store Dashboard
+### [Ecuador's Store Dashboard](https://public.tableau.com/views/EcuadorsStoreSales/products?:language=en-US&:display_count=n&:origin=viz_share_link)
 
 [Ecuador's Store Dashboard](https://public.tableau.com/views/EcuadorsStoreSales/products?:language=en-US&:display_count=n&:origin=viz_share_link) adalah visualisasi data yang menampilkan penjualan produk di toko Ecuador. Gambar-gambar di atas merupakan tampilan dari dashboard ini.
 
