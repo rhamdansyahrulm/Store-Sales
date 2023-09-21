@@ -1,6 +1,6 @@
-### [Ecuador's Store Dashboard](https://public.tableau.com/views/EcuadorsStoreSales/products?:language=en-US&:display_count=n&:origin=viz_share_link)
+# [Ecuador's Store Dashboard](https://public.tableau.com/views/EcuadorsStoreSales/products?:language=en-US&:display_count=n&:origin=viz_share_link)
 
-[Ecuador's Store Dashboard](https://public.tableau.com/views/EcuadorsStoreSales/products?:language=en-US&:display_count=n&:origin=viz_share_link) adalah visualisasi data yang menampilkan penjualan produk di toko Ecuador. Gambar-gambar di atas merupakan tampilan dari dashboard ini.
+<b>Ecuador's Store Dashboard</b> adalah visualisasi data yang menampilkan penjualan produk di toko Ecuador. Gambar-gambar di atas merupakan tampilan dari dashboard ini.
 
 <div align="center">
   <a href="https://public.tableau.com/views/EcuadorsStoreSales/products?:language=en-US&:display_count=n&:origin=viz_share_link">
