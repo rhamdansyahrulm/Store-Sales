@@ -56,15 +56,7 @@ Data retrieval
 - The pipeline retrieves all the datasets that will be used from BigQuery. The datasets are stored in the following tables:
 
 
-`revenue`
-- **Description**: This table contains the historical revenue data for each store.
-- **Fields**: The dataset includes fields such as store number, date, and revenue figures.
-`oil_prices`
-- **Description**: This table contains historical oil prices.
-- **Fields**: The dataset includes fields like date and oil price values.
-`events`
-- **Description**: This table contains historical events that have the potential to impact revenue, such as holidays and promotional events.
-- **Fields**: The dataset typically includes event dates, event types, and event descriptions.
-`stores`
-- **Description**: This table contains information about each store, such as location and size.
-- **Fields**: The dataset includes store details like store number, location, size, and any other relevant information.
+`revenue`: This table contains the historical revenue data for each store.
+`oil_prices`: This table contains the historical oil prices.
+`events`: This table contains the historical events that may affect revenue, such as holidays and promotions.
+`stores`: This table contains information about each store, such as location and size.
