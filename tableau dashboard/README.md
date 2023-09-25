@@ -38,3 +38,21 @@ This project implements a Directed Acyclic Graph (DAG) using Apache Airflow to p
 <div align="center">
     <img src="https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/d5d70cf2-3fc9-4d0e-964e-a1527885c31b" alt="Ecuador's Store Dashboard" width="65%">
 </div>
+
+This data pipeline is designed to perform the following series of steps:
+
+### 1. Data Ingestion
+**Objective**: Retrieve all necessary datasets from Google BigQuery, including revenue data, oil prices, events, and store information.
+### 2. Data Integration
+**Objective**: Merge the collected datasets based on store number and the corresponding date to create a comprehensive dataset for analysis.
+### 3. Data Preprocessing
+**Objective**: Prepare the integrated data for analysis through a series of preprocessing tasks, including:
+Normalizing data values to ensure consistent scales.
+Labeling the data to categorize or classify records as needed.
+Applying Stopword Removal techniques to clean text data.
+Feature engineering by creating additional feature columns, often using windowed datasets.
+**Note**: All required files for scaling, labeling, and prediction are stored in Google Cloud Storage.
+### 4. Data Prediction
+Objective: Utilize the preprocessed data to perform predictive analytics or forecasting tasks. This step typically involves running machine learning models or other statistical methods to generate predictions based on historical data.
+### 5. Storing Predicted Data
+Objective: Save the results of the prediction process into a dedicated table within Google BigQuery specifically designed to store prediction data.
