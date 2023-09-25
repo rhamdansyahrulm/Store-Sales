@@ -41,17 +41,19 @@ This project implements a Directed Acyclic Graph (DAG) using Apache Airflow to p
 
 This data pipeline is used to predict revenue for a retail store chain. The pipeline consists of the following steps:
 
-Data retrieval: The pipeline retrieves all the datasets that will be used from BigQuery (revenue, oil prices, events, and stores).
-Data merging: The pipeline merges the datasets based on store number and date.
-Data preprocessing: The pipeline performs data preprocessing, including data normalization, labeling, and stopword removal. Additionally, the pipeline adds feature columns by performing windowed dataset.
-Prediction: The pipeline performs prediction using a machine learning model.
-Data storage: The pipeline stores the prediction results in a dedicated prediction table in BigQuery.
-Notes:
+1. **Data retrieval:**
+   The pipeline retrieves all the datasets that will be used from BigQuery (revenue, oil prices, events, and stores).
+3. **Data merging:**
+   The pipeline merges the datasets based on store number and date.
+5. **Data preprocessing:**
+   The pipeline performs data preprocessing, including data normalization, labeling, and stopword removal. Additionally, the pipeline adds feature columns by performing windowed dataset.
+7. **Prediction:**
+   The pipeline performs prediction using a machine learning model.
 
-All the files required for scaling, labeling, and prediction are stored in Google Cloud Storage.
+**Notes:**
+- All the files required for scaling, labeling, and prediction are stored in Google Cloud Storage.
 Data retrieval
-The pipeline retrieves all the datasets that will be used from BigQuery. The datasets are stored in the following tables:
-
+- The pipeline retrieves all the datasets that will be used from BigQuery. The datasets are stored in the following tables:
 revenue: This table contains the historical revenue data for each store.
 oil_prices: This table contains the historical oil prices.
 events: This table contains the historical events that may affect revenue, such as holidays and promotions.
@@ -61,13 +63,3 @@ The pipeline merges the datasets based on store number and date. This creates a 
 
 Data preprocessing
 The pipeline performs data preprocessing to clean and prepare the data for analysis. This includes the following steps:
-
-Data normalization: The pipeline normalizes the data to a common scale. This makes it easier for the machine learning model to learn from the data.
-Labeling: The pipeline labels the data with the target variable, which is revenue. This is done by assigning a label to each data point, such as "high revenue" or "low revenue."
-Stopword removal: The pipeline removes stopwords from the data. Stopwords are common words that do not provide any useful information for prediction.
-Windowed dataset: The pipeline adds feature columns by performing windowed dataset. This allows the machine learning model to learn from the temporal patterns in the data.
-Prediction
-The pipeline uses a machine learning model to predict revenue for each store. The model is trained on the preprocessed data.
-
-Data storage
-The pipeline stores the prediction results in a dedicated prediction table in BigQuery. This table can be used to track the performance of the model and to make predictions for future dates.
