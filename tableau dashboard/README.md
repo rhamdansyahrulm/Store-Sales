@@ -60,6 +60,6 @@ Data retrieval
   
   `oil_prices` &nbsp;: This table contains the historical oil prices.
   
-  `events` &emsp;&emsp;: This table contains the historical events that may affect revenue, such as holidays and promotions.
+  `events` &emsp; &emsp;: This table contains the historical events that may affect revenue, such as holidays and promotions.
   
-  `stores` &emsp;&emsp;: This table contains information about each store, such as location and size.
+  `stores` &emsp; &emsp;: This table contains information about each store, such as location and size.
