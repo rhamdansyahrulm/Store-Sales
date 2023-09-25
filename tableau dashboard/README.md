@@ -54,15 +54,16 @@ This data pipeline is used to predict revenue for a retail store chain. The pipe
 - All the files required for scaling, labeling, and prediction are stored in Google Cloud Storage.
 Data retrieval
 - The pipeline retrieves all the datasets that will be used from BigQuery. The datasets are stored in the following tables:
-(`revenue`)
+
+`revenue`
 - **Description**: This table contains the historical revenue data for each store.
 - **Fields**: The dataset includes fields such as store number, date, and revenue figures.
-(`oil_prices`)
+`oil_prices`
 - **Description**: This table contains historical oil prices.
 - **Fields**: The dataset includes fields like date and oil price values.
-(`events`)
+`events`
 - **Description**: This table contains historical events that have the potential to impact revenue, such as holidays and promotional events.
 - **Fields**: The dataset typically includes event dates, event types, and event descriptions.
-(`stores`)
+`stores`
 - **Description**: This table contains information about each store, such as location and size.
 - **Fields**: The dataset includes store details like store number, location, size, and any other relevant information.
