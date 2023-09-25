@@ -50,6 +50,7 @@ This data pipeline is designed to perform the following series of steps:
   Labeling the data to categorize or classify records as needed.
   Applying Stopword Removal techniques to clean text data.
   Feature engineering by creating additional feature columns, often using windowed datasets.
+  <br>
   **Note**: All required files for scaling, labeling, and prediction are stored in Google Cloud Storage.
  ** 4. Data Prediction**
   Utilize the preprocessed data to perform predictive analytics or forecasting tasks. This step typically involves running machine learning models or other statistical methods to generate predictions based on historical data.
