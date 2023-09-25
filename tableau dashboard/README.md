@@ -39,19 +39,35 @@ This project implements a Directed Acyclic Graph (DAG) using Apache Airflow to p
     <img src="https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/d5d70cf2-3fc9-4d0e-964e-a1527885c31b" alt="Ecuador's Store Dashboard" width="65%">
 </div>
 
-This data pipeline is designed to perform the following series of steps:
-  **1. Data Ingestion**
-  Retrieve all necessary datasets from Google BigQuery, including revenue data, oil prices, events, and store information.
-  **2. Data Integration**
-  Merge the collected datasets based on store number and the corresponding date to create a comprehensive dataset for analysis.
-  **3. Data Preprocessing**
-  Prepare the integrated data for analysis through a series of preprocessing tasks, including:
-  Normalizing data values to ensure consistent scales.
-  Labeling the data to categorize or classify records as needed.
-  Applying Stopword Removal techniques to clean text data.
-  Feature engineering by creating additional feature columns, often using windowed datasets.
-  **Note**: All required files for scaling, labeling, and prediction are stored in Google Cloud Storage.
-  **4. Data Prediction**
-  Utilize the preprocessed data to perform predictive analytics or forecasting tasks. This step typically involves running machine learning models or other statistical methods to generate predictions based on historical data.
-  **5. Storing Predicted Data**
-  Save the results of the prediction process into a dedicated table within Google BigQuery specifically designed to store prediction data.
+This data pipeline is used to predict revenue for a retail store chain. The pipeline consists of the following steps:
+
+Data retrieval: The pipeline retrieves all the datasets that will be used from BigQuery (revenue, oil prices, events, and stores).
+Data merging: The pipeline merges the datasets based on store number and date.
+Data preprocessing: The pipeline performs data preprocessing, including data normalization, labeling, and stopword removal. Additionally, the pipeline adds feature columns by performing windowed dataset.
+Prediction: The pipeline performs prediction using a machine learning model.
+Data storage: The pipeline stores the prediction results in a dedicated prediction table in BigQuery.
+Notes:
+
+All the files required for scaling, labeling, and prediction are stored in Google Cloud Storage.
+Data retrieval
+The pipeline retrieves all the datasets that will be used from BigQuery. The datasets are stored in the following tables:
+
+revenue: This table contains the historical revenue data for each store.
+oil_prices: This table contains the historical oil prices.
+events: This table contains the historical events that may affect revenue, such as holidays and promotions.
+stores: This table contains information about each store, such as location and size.
+Data merging
+The pipeline merges the datasets based on store number and date. This creates a single dataset that contains all the information that is needed for prediction.
+
+Data preprocessing
+The pipeline performs data preprocessing to clean and prepare the data for analysis. This includes the following steps:
+
+Data normalization: The pipeline normalizes the data to a common scale. This makes it easier for the machine learning model to learn from the data.
+Labeling: The pipeline labels the data with the target variable, which is revenue. This is done by assigning a label to each data point, such as "high revenue" or "low revenue."
+Stopword removal: The pipeline removes stopwords from the data. Stopwords are common words that do not provide any useful information for prediction.
+Windowed dataset: The pipeline adds feature columns by performing windowed dataset. This allows the machine learning model to learn from the temporal patterns in the data.
+Prediction
+The pipeline uses a machine learning model to predict revenue for each store. The model is trained on the preprocessed data.
+
+Data storage
+The pipeline stores the prediction results in a dedicated prediction table in BigQuery. This table can be used to track the performance of the model and to make predictions for future dates.
