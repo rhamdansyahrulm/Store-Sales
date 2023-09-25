@@ -31,3 +31,10 @@ The "Products" dashboard is designed to display sales results based on product g
 - **Value Trending**: This chart visualizes the trending of values.
 - **Top Sales on Each Product Group**: It identifies the top-selling products within each product group.
 - **Top Promotional Products**: This chart showcases the most successful promotional products.
+
+# Data Pipeline (Monthly Store Sales Prediction)
+
+This project implements a Directed Acyclic Graph (DAG) using Apache Airflow to perform daily store sales prediction for the upcoming month in Ecuador. The DAG is designed to run automatically at 00:00 on the 1st day of each month. Here is the DAG workflow built using Apache Airflow.
+<div align="center">
+    <img src="https://github.com/rhamdansyahrulm/Store-Sales/assets/141615487/d5d70cf2-3fc9-4d0e-964e-a1527885c31b" alt="Ecuador's Store Dashboard" width="45%">
+</div>
